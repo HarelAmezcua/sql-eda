@@ -69,3 +69,53 @@ WITH DATE_CTE AS
 )
 SELECT dates, SUM(total_laid_off) OVER (ORDER BY dates ASC) AS rolling_total_layoffs
 FROM DATE_CTE;
+````
+
+This query computes a monthly rolling total of layoffs to visualize cumulative impact over time.
+
+---
+
+## 💡 Observations
+
+* Several **startups** went out of business entirely, laying off 100% of their staff.
+* Companies like **Quibi** raised billions in funding but still failed.
+* Major tech hubs and industry sectors showed high layoff volumes.
+* A clear **temporal trend** of increasing layoffs during certain years.
+
+---
+
+## 📁 Dataset Schema
+
+| Column Name             | Description                         |
+| ----------------------- | ----------------------------------- |
+| `company`               | Name of the company                 |
+| `location`              | City/region of operation            |
+| `country`               | Country of operation                |
+| `industry`              | Sector (e.g., fintech, edtech)      |
+| `total_laid_off`        | Number of employees laid off        |
+| `percentage_laid_off`   | % of workforce laid off             |
+| `funds_raised_millions` | Total funds raised (in millions)    |
+| `date`                  | Date of layoff event                |
+| `stage`                 | Funding stage (e.g., Series A, IPO) |
+
+---
+
+## 🧭 Next Steps
+
+* Visualize trends in Power BI, Tableau, or a Python notebook
+* Cluster companies by layoff behavior
+* Predict future layoffs using machine learning models
+
+---
+
+## 📌 Author
+
+**Harel Hernandez**
+*Data Scientist | Business Intelligence Enthusiast*
+Feel free to contribute or reach out for collaboration.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See `LICENSE` for more information.
